@@ -188,7 +188,7 @@
             <!--iiop enable-by-default="false" use-qualified-name="false"/-->
         </subsystem>
         <subsystem xmlns="urn:jboss:domain:infinispan:1.1" default-cache-container="cluster">
-            <cache-container name="cluster" aliases="ha-partition" default-cache="default">
+            <cache-container name="cluster" aliases="ha-partition" default-cache="default" jndi-name="java:jboss/infinispan/cluster">
                 <transport lock-timeout="60000"/>
                 <replicated-cache name="default" mode="SYNC" batching="true">
                     <locking isolation="REPEATABLE_READ"/>
